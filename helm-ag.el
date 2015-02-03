@@ -312,7 +312,7 @@ They are specified to `--ignore' options."
 (defun helm-ag--up-one-level ()
   (interactive)
   (if (or (not (helm-ag--root-directory-p))
-          (y-or-n-p "Here may be project root. Continue searcing ? "))
+          (y-or-n-p "This may be the project root. Continue searching? "))
       (let ((parent (file-name-directory (directory-file-name default-directory))))
         (helm-run-after-quit
          (lambda ()
@@ -408,7 +408,7 @@ They are specified to `--ignore' options."
 (defun helm-ag--do-ag-up-one-level ()
   (interactive)
   (if (or (not (helm-ag--root-directory-p))
-          (y-or-n-p "Here may be project root. Continue searcing ? "))
+          (y-or-n-p "This may be the project root. Continue searching? "))
       (let ((parent (file-name-directory (directory-file-name default-directory)))
             (initial-input helm-input))
         (helm-run-after-quit
